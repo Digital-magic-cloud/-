@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./CSS/animation_test.css">
+    <style>
+        .box{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(9, 100px);
+            background-color: #000;
+
+            justify-content: center;
+        }
+        .item{
+            grid-row: 4 / 5;
+            grid-column: 2 / 3;
+            border: 10px solid rgb(13, 232, 232);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item"></div>
+    </div>
+</body>
+</html>

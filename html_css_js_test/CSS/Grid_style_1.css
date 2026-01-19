@@ -1,0 +1,40 @@
+.container{
+    border: 10px solid blueviolet;
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) 3fr;
+    grid-template-rows: 100px 300px 100px;
+    /* 通过命名的方式定义布局 每个字符串代表单独一行 每个名称代表一个网格单元  */
+    grid-template-areas: 
+    "header header"
+    "aside  main  "
+    "footer footer";
+
+    /* 隐式网格（未被定义的新增网格） */
+    /* 定义隐式轨道位置 */
+    grid-auto-flow: column;
+    /* 定义尺寸 */
+    /* grid-auto-rows: 100px; */
+    grid-auto-columns: 100px;
+    
+}
+
+.item{
+    background-color: pink;
+    border: 5px solid brown;
+}
+
+.item-1{
+    grid-area: header;
+}
+
+.item-2{
+    grid-area: aside;
+}
+
+.item-3{
+    grid-area: main;
+}
+
+.item-4{
+    grid-area: footer;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 弹性盒子</title>
+
+    <style>
+        html{
+            font-size: 10px;
+        }
+
+        .container{
+            display: flex;
+            height: 40rem;
+            background-color: aqua;
+
+            /* flex 属性 */
+            /* flex-direction: column-reverse; */
+            /* 包含 row(默认) column row-reverse */
+
+            /* flex-wrap: wrap-reverse; */
+            /* 包含 nowrap(默认) warp */
+
+            justify-content: center;
+            /* 包含 flex-start(默认) flex-end center space-between space-around */
+
+            align-items: center;
+            /* 包含 flex-start flex-end center baseline stretch(默认) */
+            
+            /* 多根轴线应用 */
+            /* align-content: space-evenly; */
+            /* 包含 flex-start flex-end center space-between space-around stretch(默认) */
+
+        }
+
+        .item{
+            width: 20rem;
+            font-size: 8rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <!-- 快捷方式 .item*6{$} -->
+        <div class="item" style="background-color: antiquewhite;">1</div>
+        <div class="item" style="background-color: blue">2</div>
+        <div class="item" style="background-color: gray">3</div>
+        <div class="item" style="background-color: red">4</div>
+        <div class="item" style="background-color:yellow">5</div>
+        <div class="item" style="background-color:pink">6</div>
+    </div>
+
+</body>
+</html>

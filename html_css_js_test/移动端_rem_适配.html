@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    width=device-width : 将视口的宽度设置为设备的宽度。确保网页内容不被缩放，而是按照设备的实际宽度布局
+    initial-scale=1.0 ： 初始缩放比例级别为1。
+    minimum-scale: 最小缩放比例
+    maximum-scale: 最小缩放比例
+    user-scalable = no: 用户缩放权限(no)
+      -->
+
+    <title>移动端 rem 适配</title>
+
+    <style>
+        /* html{
+            font-size: 40px;
+        } */
+        .box_px{
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+            margin-bottom: 50px;
+        }
+        .box_rem{
+            width: 5rem;
+            height: 3rem;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box_px"></div>
+    <div class="box_rem"></div>
+
+    <script>
+        //根据设备宽度计算 HTML 标签的 font-size 的属性值
+        function resetHtmlFonSize() {
+            document.documentElement.style.fontSize = screen.width / 10 + 'px';
+        } 
+
+        resetHtmlFonSize();
+
+        //绑定事件
+        window.onresize = resetHtmlFonSize;
+    </script>
+</body>
+</html>

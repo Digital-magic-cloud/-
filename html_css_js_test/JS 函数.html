@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 函数</title>
+
+</head>
+<body>
+    <script>
+        function hello(){
+            console.log('hello ST');
+            
+        }
+
+        hello();
+
+        function hello_return(){
+            return 'hello ST return'
+        }
+
+        let text = hello_return();
+        console.log(text);
+        console.log(hello_return());
+
+        function hello_params(name){
+            console.log('hello,' + name);
+            
+        }
+
+        hello_params('管理员')
+
+        //作用域
+
+        let global_var = '全局变量';
+        function local_var_fuc(){
+            let local_var ='局部变量'
+            console.log('函数内打印全局变量：' + global_var);
+            console.log('函数内打印局部变量：' + local_var);
+
+        }
+
+        local_var_fuc();
+        console.log('函数内打印全局变量：' + global_var);
+        // 报错
+        // console.log('函数内打印局部变量：' + local_var);
+    </script>
+    
+</body>
+</html>

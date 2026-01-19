@@ -1,0 +1,56 @@
+.container{
+    border: 10px solid blueviolet;
+    display: grid;
+    height: 800px;
+
+    /* 定义行列宽 */
+    /* grid-template-columns: 150px 150px 150px */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));/* auto-fit */
+    /* 重复定义宽度 repeat(次数, 宽度) */
+    /* grid-template-rows: repeat(3, 150px); */
+
+    /* 定义行列间距 */
+    /* gap: 1em; */
+
+    /* 定义项目容器内对齐方式 */
+    justify-items: stretch;
+    align-items: stretch;
+
+    /* 定义整体网格下对齐方式 */
+    justify-content: center;
+    align-content: space-evenly;
+
+}
+.item{
+    background-color: pink;
+    border: 5px solid brown;
+}
+
+
+.item-1{
+    /* 制定项目所占行列轨道 */
+    /* grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 6; */
+
+    /* 定义单独项目对齐方式 */
+    justify-self: stretch;
+    align-self: stretch;
+}
+.item-2{
+    /* 制定项目所占行列轨道  span 表示从当前可用轨道开始*/
+    /* grid-row: span 2;
+    grid-column: span 2; */
+}
+.item-3{
+    /* grid-row: 3 / -2;
+    grid-column: 3 / -1; */
+
+    /* 调整堆叠顺序 */
+    /* z-index: 1; */
+}
+.item-4{
+    /* grid-row: 2 / 4;
+    grid-column: 4 / 6; */
+}

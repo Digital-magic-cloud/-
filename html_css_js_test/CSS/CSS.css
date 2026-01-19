@@ -1,0 +1,97 @@
+.btn{
+    /* 用于指定对哪些CSS的属性应用动画效果 */
+    transition-property: transform;
+
+    /* 用于指定动画效果持续时间 */
+    /* transition-duration: 0.3s; */
+
+    /* 用于设置单位时间内动画播放的速度是如何变化 */
+    /* ease(默认) 慢→快→慢 */
+    /* ease-in 慢速开始 一直变快 */
+    /* ease-out 快速开始 一直变慢 */
+    /* ease-in-out 快→慢→快 */
+    /* linear 匀速 */
+    /* transition-timing-function: ease; */
+
+    /* 用于设置过度发生前会延时多久 */
+    /* transition-delay: 0s; */
+
+    /* 可以使用'all'关键字来选中所有属性，但不建议使用 */
+    /* 推荐将transition-delay与transition单独使用 */
+    transition: transform 0.3s ease,background-color 0.3s,color 0.3s;
+
+}
+
+.btn:hover{
+    /* 鼠标悬停时，沿Y轴移动 '-'指向上移动 */
+    transform: translateY(-10px);
+    background-color: red;
+    color: white;
+}
+
+.box_in{
+    /* 对元素添加动画效果 */
+    /* animation-name: spin; */
+
+    /* animation-duration: 3s; */
+
+    /* animation-timing-function: ease; */
+
+    /* animation-delay: 1s; */
+
+    /* 控制动画播放次数 */
+    /* infinite 循环播放关键字 */
+    /* animation-iteration-count: infinite; */
+
+    /* 动画播放形式 */
+    /* 
+    normal(默认值): 从头到尾播放 
+    reverse：从尾到头播放（倒放）
+    alternate: 每播一次动画都会更改播放方向（首次正播放）
+    alternate-reverse: 每播一次动画都会更改播放方向（首次倒播放）
+    */
+    /* animation-direction: normal; */
+
+    /* 动画结束表现方式 */
+    /* 
+    none: 恢复初始状态
+    forwards: 停留在结束状态
+    backwards: 使元素在delay期间保持在动画起始状态
+    both: 使元素既在delay期间保持在动画起始状态 又在结束后停留在结束状态
+    */
+    /* animation-fill-mode: both; */
+
+    /* 控制动画是正常播放还是暂停 */
+    /* animation-play-state: running; */
+
+    animation: spin 3s ease 1s infinite normal both running;
+}
+
+.box_in:hover{
+    animation-play-state: paused;
+}
+
+/* 定义动画 */
+@keyframes spin{
+    /* 定义动画序列 */
+    /* 动画开始值 */
+    0%{
+        /* 从屏幕外向右滑动效果 */
+        /* transform: translate(-520px); */
+    }
+    /* 动画过程值（0%~100% */
+    50%{
+        /* 使元素增大 */
+        /* scale: 2; */
+        /* transform: rotate(0); */
+        /* border-radius: 0; */
+    }
+    /* 动画结束值 */
+    100%{
+        /* 是元素旋转360° */
+        transform: rotate(360deg);
+
+        /* 是元素变成一个完美的圆形 */
+        /* border-radius: 50%; */
+    }
+}
